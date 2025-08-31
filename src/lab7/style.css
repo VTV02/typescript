@@ -1,0 +1,208 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Styling cho table blogs */
+#blogs {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styling */
+#blogs thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#blogs th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+}
+
+/* Body rows styling */
+#blogs tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+#blogs tbody tr:hover {
+    background-color: #f8f9ff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#blogs td {
+    padding: 12px;
+    vertical-align: top;
+    border-right: 1px solid #f0f0f0;
+}
+
+#blogs td:last-child {
+    border-right: none;
+}
+
+/* Styling cho cÃ¡c cá»™t cá»¥ thá»ƒ */
+#blogs th:nth-child(1),
+#blogs td:nth-child(1) {
+    width: 60px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#blogs th:nth-child(2),
+#blogs td:nth-child(2) {
+    width: 25%;
+    font-weight: 500;
+}
+
+#blogs th:nth-child(3),
+#blogs td:nth-child(3) {
+    width: 15%;
+}
+
+#blogs th:nth-child(4),
+#blogs td:nth-child(4) {
+    width: 45%;
+    line-height: 1.6;
+}
+
+#blogs th:nth-child(5),
+#blogs td:nth-child(5) {
+    width: 15%;
+    text-align: center;
+}
+
+/* Styling cho nÃºt action */
+.btn {
+    padding: 6px 12px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+    transform: translateY(-1px);
+}
+
+.btn-view {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: #1976D2;
+    transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    #blogs {
+        font-size: 14px;
+    }
+    
+    #blogs th,
+    #blogs td {
+        padding: 8px 6px;
+    }
+    
+    .btn {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+    
+    /* áº¨n má»™t sá»‘ cá»™t trÃªn mobile náº¿u cáº§n */
+    #blogs th:nth-child(4),
+    #blogs td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #blogs th:nth-child(3),
+    #blogs td:nth-child(3) {
+        display: none;
+    }
+    
+    .btn {
+        display: block;
+        margin: 2px 0;
+        width: 100%;
+    }
+}
+
+/* Animation khi load */
+#blogs {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hiá»‡u á»©ng cho zebra striping (tÃ¹y chá»n) */
+#blogs tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+#blogs tbody tr:nth-child(even):hover {
+    background-color: #f0f4ff;
+}
+
+/* Loading state (tÃ¹y chá»n) */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "Äang táº£i...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
