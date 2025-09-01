@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const student1 = {
     username: "Lucifer",
     age: 23,
@@ -15,3 +13,4 @@ const queryInfo = (infor) => {
 };
 queryInfo(student1);
 queryInfo(student2);
+export {};

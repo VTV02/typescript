@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Student {
     // methods
     sleep() {
@@ -11,3 +9,4 @@ lucifer.name = "Lucifer";
 lucifer.age = 99;
 lucifer.address = "Heaven";
 lucifer.sleep();
+export {};

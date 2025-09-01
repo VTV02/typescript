@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 // type TRole = string | number;
 // type TSuperRole = "ADMIN" | "USER" | "GUEST";
 // const user: TRole = "USER";
@@ -13,3 +11,4 @@ var ERole;
 })(ERole || (ERole = {}));
 const myRole = ERole.ADMIN;
 console.log(myRole);
+export {};

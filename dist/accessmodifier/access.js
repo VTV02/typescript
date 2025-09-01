@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Animals {
     set age(age) {
         this.age_ = age;
@@ -17,3 +15,4 @@ class Animals {
 }
 const tom = new Animals("Dog", 3);
 console.log(tom.age);
+export {};
