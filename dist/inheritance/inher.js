@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class Parent {
     sharedHouse() {
         console.log("Share a house");
@@ -12,3 +10,4 @@ class Child extends Parent {
     }
 }
 const tom = new Child();
+export {};
