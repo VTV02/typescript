@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do list</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container mt4">
+      <h1 class="text-success">To Do List</h1>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        id="mCreatebtn">
+        Create new To do
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Add new to do
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="mInput" class="form-label">To do</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mInput"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter the tasks" />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary" id="btnAdd">
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <table class="table table-responsive table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Tasks</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tBody"></tbody>
+        </table>
+      </div>
+      <!-- Toasts -->
+      <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div
+          id="liveToast"
+          class="toast text-bg-success border-0"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true">
+          <div class="d-flex">
+            <div class="toast-body" id="toastMessage">
+              Task created successfully!
+            </div>
+            <button
+              type="button"
+              class="btn-close btn-close-white me-2 m-auto"
+              data-bs-dismiss="toast"></button>
+          </div>
+          <!-- Thanh progress -->
+          <div class="progress" style="height: 3px">
+            <div
+              id="toastProgress"
+              class="progress-bar bg-light"
+              style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer bg-light text-center py-3">
+        <p class="mb-1">To Do List</p>
+        <p class="mb-1">© Copyright 2025 - Võ Văn Trung</p>
+        <p class="mb-0">Địa chỉ: Khu Liên Hợp Snoul, THACO AGRI</p>
+      </footer>
+    </div>
+    <script type="module" src="../../dist/project3/project3.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -10,7 +10,9 @@ export {};
 // const superUser: TSuperRole = "ADMIN";
 
 enum ERole {
-    USER, ADMIN, GUEST
+  USER,
+  ADMIN,
+  GUEST,
 }
 
 const myRole: ERole = ERole.ADMIN;
