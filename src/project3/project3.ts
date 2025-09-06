@@ -71,7 +71,7 @@ const generateTable = () => {
 // Function to delete todo
 function deleteTodo(index: number) {
   const todos: ITodo[] = JSON.parse(localStorage.getItem("todos") || "[]");
-  todos.splice(index, 1);
+  todos.splice(index, 2);
   localStorage.setItem("todos", JSON.stringify(todos));
   generateTable();
 }

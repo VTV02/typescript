@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Lucifer",
+      "email": "lucifer@god.heaven"
+    },
+    {
+      "id": 2,
+      "name": "Zeus",
+      "email": "zeus@king.heaven"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "content": "This is a post."
+    },
+    {
+      "id": 2,
+      "title": "Another Post",
+      "content": "More content here."
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Self Motivation?",
+      "author": "TrungSoft",
+      "content": "Every bug you fix makes you a better developer."
+    },
+    {
+      "id": 2,
+      "title": "Why?",
+      "author": "LuciferSoft",
+      "content": "Code is like humor. When you have to explain it, it’s bad — so keep improving."
+    }
+  ]
+}
