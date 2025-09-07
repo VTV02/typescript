@@ -1,7 +1,6 @@
-"use strict";
-// function getRandomId(min: number = 1, max: number = 1000): number {
-//   return Math.floor(Math.random() * (max - min) + min);
-// }
+function getRandomId(min = 1, max = 1000) {
+    return Math.floor(Math.random() * (max - min) + min);
+}
 const btnSave = document.getElementById("btnSave");
 const tBody = document.getElementById("tBody");
 const fetchData = async () => {
@@ -29,3 +28,4 @@ const renderTable = (data) => {
     });
 };
 fetchData();
+export {};

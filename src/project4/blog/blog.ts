@@ -1,7 +1,7 @@
-// function getRandomId(min: number = 1, max: number = 1000): number {
-//   return Math.floor(Math.random() * (max - min) + min);
-// }
-
+function getRandomId(min: number = 1, max: number = 1000): number {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+export{};
 interface IBlog {
   id: number;
   title: string;
@@ -18,8 +18,14 @@ const fetchData = async () => {
     throw new Error(`HTTP is not response: ${res.status}`);
   }
   const data: IBlog[] = (await res.json()) as IBlog[];
+  
+
+
   renderTable(data);
 };
+
+
+
 
 const renderTable = (data: IBlog[]) => {
   tBody.innerHTML = "";
