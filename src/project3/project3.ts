@@ -2,16 +2,11 @@ function getRandomId(min: number = 1, max: number = 1000): number {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-<<<<<<< HEAD
 interface ITask {
-=======
-interface ITodo {
->>>>>>> refs/remotes/origin/main
   id: number;
   name: string;
 }
 
-<<<<<<< HEAD
 const addInput = document.getElementById("mInput") as HTMLInputElement;
 const btnAdd = document.getElementById("btnAdd") as HTMLButtonElement;
 const tBody = document.getElementById("tBody") as HTMLElement;
@@ -42,67 +37,23 @@ btnAdd.addEventListener("click", () => {
   // Close modal - Multiple approaches for better compatibility
   const modalElement = document.getElementById("exampleModal") as HTMLElement;
   //   take a instance of window modal
-=======
-const add = document.getElementById("addTodoBtn") as HTMLButtonElement;
-const inputText = document.getElementById("todoInput") as HTMLInputElement;
-const table = document.getElementById("todoTableBody") as HTMLElement;
-
-add.addEventListener("click", () => {
-  const todoText = inputText.value.trim();
-  if (!todoText) {
-    alert("Please enter a task!");
-    return;
-  }
-  const myTodo: ITodo = {
-    id: getRandomId(1, 100),
-    name: todoText,
-  };
-
-  // Get existing todos from localStorage
-  let todos: ITodo[] = [];
-  const existingTodos: ITodo[] = JSON.parse(
-    localStorage.getItem("todos") || "[]"
-  );
-  todos = existingTodos;
-
-  todos.push(myTodo);
-
-  // SetItem to LocalStorage
-  localStorage.setItem("todos", JSON.stringify(todos));
-
-  // Clear input after adding
-  inputText.value = "";
-
-  // Close modal - Multiple approaches for better compatibility
-  const modalElement = document.getElementById("exampleModal") as HTMLElement;
->>>>>>> refs/remotes/origin/main
   const modal = (window as any).bootstrap.Modal.getInstance(modalElement);
   // Regenerate table
   if (modal) {
     modal.hide();
   }
-<<<<<<< HEAD
   showToast("Task created successfully!", "success", 3000);
 
   //   Close modal after enter tasks
-=======
->>>>>>> refs/remotes/origin/main
   generateTable();
 });
 
 const generateTable = () => {
-<<<<<<< HEAD
   const todos: ITask[] = JSON.parse(localStorage.getItem("tasks") || "[]");
   tBody.innerHTML = "";
 
   if (todos.length === 0) {
     tBody.innerHTML = `
-=======
-  const todos: ITodo[] = JSON.parse(localStorage.getItem("todos") || "[]");
-  table.innerHTML = "";
-  if (todos.length === 0) {
-    table.innerHTML = `
->>>>>>> refs/remotes/origin/main
        <tr>
         <td colspan="3" class="text-center text-muted">No tasks yet. Add your first task!</td>
       </tr>
@@ -110,7 +61,6 @@ const generateTable = () => {
     return;
   }
 
-<<<<<<< HEAD
   todos.forEach((element) => {
     tBody.innerHTML += `<tr>
             <td>${element.id}</td>
@@ -176,24 +126,6 @@ const showToast = (
     progressBar.style.width = "0%";
   }, 50);
 };
-=======
-  todos.forEach((td: ITodo, index: number) => {
-    table.innerHTML += `<tr>
-      <td>${td.id}</td>
-      <td>${td.name}</td>
-      <td><button class="btn btn-danger btn-sm" onclick="deleteTodo(${index})">Delete</button></td>
-    </tr>`;
-  });
-};
-
-// Function to delete todo
-function deleteTodo(index: number) {
-  const todos: ITodo[] = JSON.parse(localStorage.getItem("todos") || "[]");
-  todos.splice(index, 2);
-  localStorage.setItem("todos", JSON.stringify(todos));
-  generateTable();
-}
->>>>>>> refs/remotes/origin/main
 
 // Initialize table on page load
 document.addEventListener("DOMContentLoaded", function (): void {

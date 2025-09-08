@@ -25,52 +25,22 @@
   ],
   "blogs": [
     {
-      "id": "1",
-      "title": "Self Motivation?",
-      "author": "TrungSoft",
-      "content": "Every bug you fix makes you a better developer."
-    },
-    {
       "id": "2",
       "title": "Why?",
       "author": "LuciferSoft",
       "content": "Code is like humor. When you have to explain it, it’s bad — so keep improving."
     },
     {
-      "id": 245,
-      "title": "ABC",
-      "author": "Alexsander Trump",
-      "content": "XYZ"
-    },
-    {
-      "id": 481,
-      "title": "How can I get it",
-      "author": "Lucifer Heaven",
-      "content": "ohmygod.com"
-    },
-    {
-      "id": 780,
+      "id": "168",
       "title": "The threater of dreams",
-      "author": "Alex Fuguson",
-      "content": "Manchester is a part of my life"
+      "author": "Girdu",
+      "content": "Bootstrap Grid System Explained"
     },
     {
-      "id": 397,
-      "title": "Tottenham",
-      "author": "Zidane",
-      "content": "Son is a part of my life"
-    },
-    {
-      "id": 176,
-      "title": "Spotify",
-      "author": "Pep",
-      "content": "Barcalona is half of my life"
-    },
-    {
-      "id": 553,
-      "title": "SuperZ",
-      "author": "Alexsander Trump",
-      "content": "Ana gumby"
+      "id": "659",
+      "title": "Live",
+      "author": "MCT",
+      "content": "Live the moment"
     }
   ]
 }

@@ -43,47 +43,19 @@ const generateTable = () => {
     tBody.innerHTML = "";
     if (todos.length === 0) {
         tBody.innerHTML = `
-=======
-  const todos: ITodo[] = JSON.parse(localStorage.getItem("todos") || "[]");
-  table.innerHTML = "";
-  if (todos.length === 0) {
-    table.innerHTML = `
-            < tr >
-            colspan;
-        "3";
-        class {
-        }
-        "text-center text-muted" > No;
-        tasks;
-        yet.Add;
-        your;
-        first;
-        task < /td>
-            < /tr> `;
-    return;
-  }
-
-<<<<<<< HEAD
-  todos.forEach((element) => {
-    tBody.innerHTML += ` < tr >
-            $;
-        {
-            element.id;
-        }
-        /td>
-            < td > $;
-        {
-            element.name;
-        }
-        /td>
-            < td > class {
-        };
-        "btn btn-danger delete";
-        data - id;
-        "${element.id}" > Delete < /button></td >
-            /tr>`;
+       <tr>
+        <td colspan="3" class="text-center text-muted">No tasks yet. Add your first task!</td>
+      </tr>
+    `;
+        return;
     }
-    ;
+    todos.forEach((element) => {
+        tBody.innerHTML += `<tr>
+            <td>${element.id}</td>
+            <td>${element.name}</td>
+            <td><button class = "btn btn-danger delete" data-id = "${element.id}">Delete</button></td>
+        </tr>`;
+    });
     document.querySelectorAll(".delete").forEach((btn) => {
         btn.addEventListener("click", () => {
             const id = btn.getAttribute("data-id");
@@ -132,6 +104,7 @@ const showToast = (message, type = "success", duration = 3000) => {
         progressBar.style.width = "0%";
     }, 50);
 };
+// Initialize table on page load
 document.addEventListener("DOMContentLoaded", function () {
     generateTable();
 });
