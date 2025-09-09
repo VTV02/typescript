@@ -142,7 +142,6 @@ const renderTable = (data: IBlog[]) => {
     });
   });
 
-  // Edit buttons - SỬA: dùng .edit thay vì .delete
   document.querySelectorAll(".edit").forEach((btn) => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("edit-id");
